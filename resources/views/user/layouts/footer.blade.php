@@ -37,9 +37,9 @@
   </div>
 
   <div class=" flex gap-7">
-    <img src=" {{ asset('user/assets/img/Car 9.jpg') }}" class="h-[33px] w-[33px] object-cover rounded-full bg-primary" alt="">
-    <img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full bg-secondary" alt="">
-    <a href=""><img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full bg-dark"
+    <a href="#"> <img src=" {{ asset('user/assets/img/Car 9.jpg') }}" class="h-[33px] w-[33px] object-cover rounded-full bg-primary" alt=""></a>
+   <a href="#"> <img src=" {{ asset('user/assets/img/Car 9.jpg') }}" class="h-[33px] w-[33px] object-cover rounded-full bg-secondary" alt=""></a> 
+    <a href=""><img src=" {{ asset('user/assets/img/Car 9.jpg') }}" class="h-[33px] w-[33px] object-cover rounded-full bg-dark"
         alt=""></a>
   </div>
 </div>
