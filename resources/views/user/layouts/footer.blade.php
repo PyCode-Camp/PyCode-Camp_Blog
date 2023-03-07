@@ -18,7 +18,7 @@
 <!-- Subscribe section -->
 <section>
 
-<div class="bg-secondary h-[11vh] flex items-center gap-5 rounded-t-[15px]">
+<div class=" bg-cyan-400 h-[11vh] flex items-center gap-5 rounded-t-[15px]">
 
   <div class=" border-r-[1px] p-2">
     <h4 class=" text-[9px] leading-3"
@@ -37,7 +37,7 @@
   </div>
 
   <div class=" flex gap-7">
-    <img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full bg-primary" alt="">
+    <img src=" {{ asset('user/assets/img/Car 9.jpg') }}" class="h-[33px] w-[33px] object-cover rounded-full bg-primary" alt="">
     <img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full bg-secondary" alt="">
     <a href=""><img src=" assets/images/Car 9.jpg" class="h-[33px] w-[33px] object-cover rounded-full bg-dark"
         alt=""></a>

@@ -1,4 +1,4 @@
-import "../css/app.css";
+
 
 let tabs = document.querySelectorAll(".tab");
 let indicator = document.querySelector(".indicator");
