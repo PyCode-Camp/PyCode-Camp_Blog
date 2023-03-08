@@ -5,7 +5,7 @@
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 
 <!-- Bootstrap 3.3.6 -->
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src=" {{ asset('admin/bootstrap/js/bootstrap.min.js') }}"></script>
 
 <!-- Bootstrap WYSIHTML5 -->
 <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
