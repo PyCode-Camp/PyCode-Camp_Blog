@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('slug','200');
             $table->text('body');
             $table->boolean('status');
-            
+            $table->integer('posted_by');
+            $table->string('image');
             $table->timestamps();
 
         });
