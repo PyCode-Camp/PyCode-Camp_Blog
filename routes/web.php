@@ -20,6 +20,16 @@ Route::get('/', function () {
 Route::get('admin/home', function () {
 
     return view('admin.index');
-});
+})->name('adminHome');
+
+Route::get('admin/category', function () {
+
+    return view('admin.category');
+})->name('category');
+
+Route::get('admin/post/create', function () {
+
+    return view('admin.post');
+})->name('create');
 
 

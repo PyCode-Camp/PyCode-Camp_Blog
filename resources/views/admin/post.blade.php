@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<?php include 'includes\head.php';?>
+
+@include('admin.includes.head')
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
-  <?php include 'includes\header.php';?>
+ 
+  @include('admin.includes.header')
   </header>
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
-  <?php include 'includes\sidebar.php';?>
+  
+  @include('admin.includes.sidebar')
   </aside>
 
 <div class="content-wrapper">
@@ -120,8 +123,10 @@
 
   </div>
   <footer class="main-footer">
-  <?php include 'includes\footer.php';?>
+
+  @include('admin.includes.footer')
   </footer>
-<?php include 'includes\scripts.php';?>
+
+@include('admin.includes.scripts')
 </body>
 </html>
