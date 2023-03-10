@@ -42,7 +42,7 @@
           </div>
           <!-- /.box-header -->
           <!-- form start -->
-          <form role="form">
+          <form role="form" method="POST" action="{{ route('post.store') }}">
             <div class="box-body">
 
             <div class="col-lg-6">

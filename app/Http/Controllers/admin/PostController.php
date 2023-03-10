@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\RedirectResponse;
 
 class PostController extends Controller
 {
@@ -12,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+       return view('admin.index');
     }
 
     /**
@@ -20,15 +22,21 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.post');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
-        //
+        
+        $validate = $request->validate([
+            
+            'title' => 'required|string|max:255',
+            'subtitle' => 'required|string|max:255',
+            
+        ]);
     }
 
     /**

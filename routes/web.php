@@ -17,19 +17,19 @@ Route::get('/', function () {
     return view('user.home');
 });
 
-Route::get('admin/home', function () {
+Route::resource('admin/post','App\Http\Controllers\admin\PostController');
+Route::resource('admin/category','App\Http\Controllers\admin\CategoryController');
 
-    return view('admin.index');
-})->name('adminHome');
+Route::resource('admin/tag', 'App\Http\Controllers\admin\TagController');
 
-Route::get('admin/category', function () {
+//Route::get('admin/category', function () {
 
-    return view('admin.category');
-})->name('category');
+  //  return view('admin.category');
+//})->name('category');
 
-Route::get('admin/post/create', function () {
+//Route::get('admin/post/create', function () {
 
-    return view('admin.post');
-})->name('create');
+  //  return view('admin.post');
+//})->name('create');
 
 

@@ -24,12 +24,12 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="active"><a href="{{ route('adminHome')}}"><i class="fa fa-circle-o"></i>View Post</a></li>
-              <li><a href="{{ route('create') }}"><i class="fa fa-circle-o"></i> Create Post</a></li>
+              <li class="active"><a href="{{ route('post.index') }}"><i class="fa fa-circle-o"></i>View Post</a></li>
+              <li><a href="{{ route('post.create') }}"><i class="fa fa-circle-o"></i> Create Post</a></li>
             </ul>
           </li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i>Tags</a></li>
-            <li><a href="{{ route('category') }}"><i class="fa fa-circle-o"></i>Category</a></li>
+            <li><a href="{{ route('tag.index') }}"><i class="fa fa-circle-o"></i>Tags</a></li>
+            <li><a href="{{ route('category.index') }}"><i class="fa fa-circle-o"></i>Category</a></li>
             <li><a href="index2.html"><i class="fa fa-circle-o"></i>Mailbox</a></li>
         </li>
     </section>
