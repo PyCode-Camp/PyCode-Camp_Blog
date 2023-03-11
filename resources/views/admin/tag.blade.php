@@ -49,7 +49,9 @@
 
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form role="form" action="{{ route('tag.store') }}" method="POST">
+                                     {{ csrf_field() }}
+                                    
                                     <div class="box-body">
 
                                         <div class="col-lg-offset-3 col-lg-6">
