@@ -22,7 +22,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('admin.post');
+        return view('admin.post.post');
     }
 
     /**
@@ -31,12 +31,25 @@ class PostController extends Controller
     public function store(Request $request): RedirectResponse
     {
         
-        $validate = $request->validate([
+         $this->validate($request, [
             
             'title' => 'required|string|max:255',
             'subtitle' => 'required|string|max:255',
-            
+            'slug' => 'required',
+            'body' => 'required',
         ]);
+       
+
+        $post = new Post();
+
+        $post->title = $request->title;
+        $post->subtitle = $request->subtitle;
+        $post->slug = $request->slug;
+        $post->body = $request->body;
+        $post->save();
+        
+        return redirect(route('post.index'));
+      
     }
 
     /**
