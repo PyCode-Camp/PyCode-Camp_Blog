@@ -46,12 +46,14 @@
                                     <h3 class="box-title">Title</h3>
                                 </div>
 
+                                {{-- display error messages --}}
+                               @include('admin.includes.errorMessages')
 
                                 <!-- /.box-header -->
                                 <!-- form start -->
                                 <form role="form" action="{{ route('tag.store') }}" method="POST">
-                                     {{ csrf_field() }}
-                                    
+                                    {{ csrf_field() }}
+
                                     <div class="box-body">
 
                                         <div class="col-lg-offset-3 col-lg-6">
