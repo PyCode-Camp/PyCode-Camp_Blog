@@ -13,14 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user.home');
+// User Routes
+Route::group(['namespace' => 'App\Http\Controllers\user'], function(){
+
+  Route::get('/', 'HomeController@index');
 });
 
-Route::resource('admin/post','App\Http\Controllers\admin\PostController');
-Route::resource('admin/category','App\Http\Controllers\admin\CategoryController');
+  
 
-Route::resource('admin/tag', 'App\Http\Controllers\admin\TagController');
+
+// Admin Routes
+Route::group(['namespace' => 'App\Http\Controllers\Admin'], function(){
+
+  //Post Routes
+  Route::resource('admin/post','PostController');
+
+  //Category Routes
+  Route::resource('admin/category','CategoryController');
+
+  //Tag Routes
+  Route::resource('admin/tag', 'TagController');
+
+});
+
+
 
 //Route::get('admin/category', function () {
 
