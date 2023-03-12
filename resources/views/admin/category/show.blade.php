@@ -27,6 +27,7 @@
     <div class="box">
         <div class="box-header">
           <h3 class="box-title">Category Table</h3>
+          <a class="col-lg-offset-4 btn btn-success" href="{{ route('category.create')}}">Add Category</a>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -34,42 +35,37 @@
             <thead>
             <tr>
               <th>S.No</th>
-              <th>Browser</th>
-              <th>Platform(s)</th>
-              <th>Engine version</th>
-              <th>CSS grade</th>
+              <th>Category Name</th>
+              <th>Slug</th>
+              <th>Edit</th>
+              <th>Delete</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-              <td>Trident</td>
-              <td>Internet
-                Explorer 4.0
-              </td>
-              <td>Win 95+</td>
-              <td> 4</td>
-              <td>X</td>
-            </tr>
-            <tr>
-              <td>Trident</td>
-              <td>Internet
-                Explorer 5.0
-              </td>
-              <td>Win 95+</td>
-              <td>5</td>
-              <td>C</td>
-            </tr>
+
+                @foreach ( $categories as  $category)
+
+                <tr>
+                    <td>{{ $loop->index + 1 }}</td>
+                    <td> {{ $category->name }}</td>
+                    <td>{{ $category->slug }}</td>
+                    <td> Edit</td>
+                    <td>Delete</td>
+                  </tr>
+                @endforeach
+            
+           
            
             
          
             </tbody>
             <tfoot>
             <tr>
-              <th>Rendering engine</th>
-              <th>Browser</th>
-              <th>Platform(s)</th>
-              <th>Engine version</th>
-              <th>CSS grade</th>
+                <th>S.No</th>
+                <th>Category Name</th>
+                <th>Slug</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
             </tfoot>
           </table>
