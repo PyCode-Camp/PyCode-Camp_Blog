@@ -27,12 +27,12 @@ Route::get('post', function(){
 Route::get('/team', function(){
 
   return view('user.team');
-})->name('Team');
+})->name('team');
 
 Route::get('/advertise', function(){
 
   return view('user.advertise-withus');
-});
+})->name('advertise');
 
   
 
@@ -53,14 +53,5 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin'], function(){
 
 
 
-//Route::get('admin/category', function () {
-
-  //  return view('admin.category');
-//})->name('category');
-
-//Route::get('admin/post/create', function () {
-
-  //  return view('admin.post');
-//})->name('create');
 
 
