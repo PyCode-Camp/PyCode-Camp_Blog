@@ -77,6 +77,7 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        category::where('id', $id)->delete();
+        return redirect()->back();
     }
 }
