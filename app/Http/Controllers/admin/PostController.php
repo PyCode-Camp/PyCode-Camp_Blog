@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\admin;
 
-use App\Models\Post;
+
+use App\Models\user\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
@@ -14,7 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-       return view('admin.index');
+        $posts = Post::all();
+       return view('admin.index', compact('posts'));
     }
 
     /**
@@ -22,6 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
+        
         return view('admin.post.post');
     }
 
@@ -40,7 +43,7 @@ class PostController extends Controller
         ]);
        
 
-        $post = new Post();
+        $post = new Post;
 
         $post->title = $request->title;
         $post->subtitle = $request->subtitle;
