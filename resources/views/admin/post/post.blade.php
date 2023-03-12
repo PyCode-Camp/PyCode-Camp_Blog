@@ -41,6 +41,7 @@
                         <div class="box box-primary">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Title</h3>
+                                <a class="col-lg-offset-9 btn btn-facebook" href="{{ route('post.index')}}">View All</a>
                             </div>
 
                             @if (count($errors) > 0)
