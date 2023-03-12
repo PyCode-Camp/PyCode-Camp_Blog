@@ -29,6 +29,11 @@ Route::get('/team', function(){
   return view('user.team');
 })->name('Team');
 
+Route::get('/advertise', function(){
+
+  return view('user.advertise-withus');
+});
+
   
 
 
