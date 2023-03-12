@@ -24,6 +24,16 @@ Route::get('post', function(){
   return view('user.main-post');
 })->name('Userpost');
 
+Route::get('/team', function(){
+
+  return view('user.team');
+})->name('Team');
+
+Route::get('/advertise', function(){
+
+  return view('user.advertise-withus');
+});
+
   
 
 
