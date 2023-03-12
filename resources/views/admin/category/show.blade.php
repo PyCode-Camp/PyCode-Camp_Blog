@@ -49,7 +49,7 @@
                     <td>{{ $loop->index + 1 }}</td>
                     <td> {{ $category->name }}</td>
                     <td>{{ $category->slug }}</td>
-                    <td> Edit</td>
+                    <td>  <a href="{{ route('category.edit', $category->id)}}"> <span class="glyphicon glyphicon-edit"></span></a></td>
                     <td>
 
                       <form id="category-delete-{{ $category->id }}" action=" {{ route('category.destroy', $category->id)}}" method="POST" style="display: none;">

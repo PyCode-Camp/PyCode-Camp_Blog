@@ -61,7 +61,8 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $category = category::where('id', $id)->first();
+        return view('admin.category.edit',compact('category'));
     }
 
     /**
@@ -69,7 +70,23 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $this->validate($request, [
+            
+            'name' => 'required',
+            'slug' => 'required',
+        ]);
+
+        $validate = $request->validate([
+            
+            'name' => 'required',
+            'slug' => 'required',  
+        ]);
+
+        $category = category::where('id', $id)->first();
+
+        $category->update($validate);
+
+        return redirect(route('category.index'));
     }
 
     /**
