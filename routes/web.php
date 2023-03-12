@@ -19,6 +19,11 @@ Route::group(['namespace' => 'App\Http\Controllers\user'], function(){
   Route::get('/', 'HomeController@index');
 });
 
+Route::get('post', function(){
+
+  return view('user.main-post');
+})->name('Userpost');
+
   
 
 

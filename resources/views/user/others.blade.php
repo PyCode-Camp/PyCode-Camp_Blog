@@ -14,17 +14,17 @@
 
 
 
-    @section('main-content')
+    @section('mainContent')
       @show 
 
  
 
-  @include('user.layouts.footer')
+  @include('user.layouts.footer2')
 
 
 
 
-  @include()
+  @include('user.layouts.scripts')
   
 </body>
 
