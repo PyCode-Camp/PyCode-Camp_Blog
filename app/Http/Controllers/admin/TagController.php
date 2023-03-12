@@ -13,7 +13,8 @@ class TagController extends Controller
      */
     public function index()
     {
-        return view('admin.tag.show');
+        $tags = tag::all();
+        return view('admin.tag.show', compact('tags'));
     }
 
     /**
@@ -21,6 +22,7 @@ class TagController extends Controller
      */
     public function create()
     {
+        
         return view('admin.tag.tag');
     }
 

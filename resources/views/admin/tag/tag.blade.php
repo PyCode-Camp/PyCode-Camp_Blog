@@ -43,7 +43,8 @@
 
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Title</h3>
+                                    <h3 class="box-title">Add Tag</h3>
+                                    <a class="col-lg-offset-9 btn btn-facebook" href="{{ route('tag.index')}}">View All</a>
                                 </div>
 
                                 {{-- display error messages --}}
