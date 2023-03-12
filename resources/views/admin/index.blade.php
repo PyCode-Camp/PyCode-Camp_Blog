@@ -53,7 +53,7 @@
                     <td>{{ $post->subtitle }}</td>
                     <td> {{ $post->slug }}</td>
                     <td>{{ $post->created_at }}</td>
-                    <td><a href=""><span class="glyphicon glyphicon-edit"></span></a></td>
+                    <td><a href="{{ route('post.edit', $post)}}"><span class="glyphicon glyphicon-edit"></span></a></td>
 
                     <td>
 

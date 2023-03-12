@@ -68,15 +68,31 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+
+        return view('admin.post.edit',compact('post'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Post $post): RedirectResponse
     {
-        //
+
+        $validated = $request->validate([
+            
+            'title' => 'required|string|max:255',
+            'subtitle' => 'required|string|max:255',
+            'slug' => 'required',
+            'body' => 'required',
+
+        ]);
+
+        $post->update($validated);
+
+       
+
+        return redirect(route('post.index'));
+      
     }
 
     /**
