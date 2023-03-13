@@ -24,7 +24,7 @@
 
 
 
-  @include()
+@include('user.layouts.scripts')
   
 </body>
 
