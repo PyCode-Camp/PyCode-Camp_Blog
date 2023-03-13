@@ -186,8 +186,8 @@
                                     <!-- /.box-header -->
                                     <div class="box-body pad">
 
-                                        <textarea class="textarea" placeholder="Place some text here" name="body"
-                                            style="width: 100%; height: 300px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{ $post->body }}</textarea>
+                                        <textarea class=""  name="body"
+                                            style="width: 100%; height: 300px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" id="editor1">{{ $post->body }}</textarea>
 
                                     </div>
                                 </div>

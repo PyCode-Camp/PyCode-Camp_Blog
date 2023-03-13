@@ -16,9 +16,21 @@
 <!-- AdminLTE App -->
 <script src="{{ asset('admin/dist/js/app.min.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{ asset('admin/dist/js/pages/dashboard.js') }}"></script>
+<!-- CK Editor -->
+<script src="{{ asset('admin/plugins/ckeditor/ckeditor.js')}}"></script>
+{{-- <script src="{{ asset('admin/dist/js/pages/dashboard.js') }}"></script> --}}
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('admin/dist/js/demo.js') }}"></script>
+
+<script>
+    $(function () {
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace('editor1')
+    //bootstrap WYSIHTML5 - text editor
+    $('.textarea').wysihtml5()
+  })
+</script>
 
 @section('addScripts')
     @show
