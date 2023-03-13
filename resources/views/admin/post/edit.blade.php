@@ -3,9 +3,28 @@
 
 <head>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    
+
     @include('admin.includes.head')
+
+        <style>
+
+/* select2.min.css | https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css */
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  
+  position:relative !important; 
+}
+
+        </style>
+
       <!-- Select2 -->
-  <link rel="stylesheet" href="{{ asset('admin/plugins/select2/select2.min.css')}}">
+  {{-- <link rel="stylesheet" href="{{ asset('admin/plugins/select2/select2.min.css')}}"> --}}
    <!-- iCheck for checkboxes and radio inputs -->
    <link rel="stylesheet" href="{{ asset('admin/plugins/iCheck/all.css')}}">
 </head>
@@ -87,17 +106,55 @@
 
                                     <div class="col-lg-6">
 
+                                       <br>
+
                                         <div class="form-group">
-                                            <label for="image">File input</label>
-                                            <input type="file" name="image" id="image" value="{{ $post->image}}">
-                                            <br><br>
-                                            <div class="Publish">
+
+                                            <div class="pull-right">
+                                                <label for="image">File input</label>
+                                                <input type="file" name="image" id="image" value="{{ $post->image}}">
+                                            </div>
+                                            
+                                            
+                                            <div class="Publish pull-left">
                                                 <label>
-                                                    <input type="checkbox" name="status" @if ($post->status == 1) checked @endif>  Check me out
+                                                    <input class="" type="checkbox" name="status" @if ($post->status == 1) checked @endif>  <span class="" style="margin-left: 2px;">Check me out</span>
                                                 </label>
                                             </div>
 
                                         </div>
+
+                                        <br><br>
+
+                                         {{-- multiple select --}}
+                                         <div class="form-group">
+                                            <label>Select Tags</label>
+                                            <select class="form-control select2" multiple="multiple" name="states[]" 
+                                                    style="width: 100%;">
+                                              <option>Alabama</option>
+                                              <option>Alaska</option>
+                                              <option>California</option>
+                                              <option>Delaware</option>
+                                              <option>Tennessee</option>
+                                              <option>Texas</option>
+                                              <option>Washington</option>
+                                            </select>
+                                          </div>
+
+                                           {{-- multiple select --}}
+                                         <div class="form-group">
+                                            <label>Select Categories</label>
+                                            <select class="form-control select2" multiple="multiple" name="states[]" 
+                                                    style="width: 100%;">
+                                              <option>Alabama</option>
+                                              <option>Alaska</option>
+                                              <option>California</option>
+                                              <option>Delaware</option>
+                                              <option>Tennessee</option>
+                                              <option>Texas</option>
+                                              <option>Washington</option>
+                                            </select>
+                                          </div>
 
                                     </div>
                                 </div>
@@ -116,21 +173,7 @@
                                         </div>
                                         <!-- /. tools -->
 
-                                        {{-- multiple select --}}
-                                        <div class="form-group">
-                                            <label>Multiple</label>
-                                            <select class="form-control " id="select" multiple="multiple" data-placeholder="Select a State"
-                                                    style="width: 100%;">
-                                              <option>Alabama</option>
-                                              <option>Alaska</option>
-                                              <option>California</option>
-                                              <option>Delaware</option>
-                                              <option>Tennessee</option>
-                                              <option>Texas</option>
-                                              <option>Washington</option>
-                                            </select>
-                                          </div>
-
+                                       
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body pad">
@@ -168,20 +211,25 @@
         @include('admin.includes.footer')
     </footer>
 
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2({
+                placeholder:"Select a State"
+            });
+        });
+    </script>
+
     @include('admin.includes.scripts')
 
-    
+   
+
     <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
         <!-- Select2 -->
         <script src="{{ asset('admin/plugins/select2/select2.full.min.js')}}"></script>
         <!-- iCheck 1.0.1 -->
         <script src="{{ asset('admin/plugins/iCheck/icheck.min.js')}}"></script>
 
-        <script>
-            $(document).ready(function() {
-                $('#select2').select2();
-            });
-        </script>
+        
    
 </body>
 

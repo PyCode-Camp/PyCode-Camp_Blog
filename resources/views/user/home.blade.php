@@ -31,7 +31,9 @@
         <!-- Panel 1 -->
         <div role="tabpanel" id="panel-1" class="tab-panel p-1 transition duration-300">
 
-          <!-- article 1 -->
+          @foreach ($posts as $post)
+            
+            <!-- article 1 -->
           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start snap-mandatory">
             <img src=" {{ asset('user/assets/img/Car 9.jpg') }}"
               class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
@@ -39,16 +41,20 @@
               <a href="#">
               <h3
                 class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
-                Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
+                  {{ $post->title }}</h3>
               </a>
               <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
-                style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
+                style="color: rgba(15, 15, 15, 0.74);">{{$post->created_at->format('j M Y')}} 8 min read</p>
             </div>
 
           </div>
 
+          @endforeach
+
+          
+
           <!-- article 2 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start snap-mandatory">
+          <!--<div class=" grid grid-cols-2 border-b-2 pb-2 snap-start snap-mandatory">
             <img src=" {{ asset('user/assets/img/Car 9.jpg') }}"
               class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
@@ -61,10 +67,10 @@
                 style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
 
-          </div>
+          </div>-->
 
           <!-- article 3 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start snap-mandatory">
+          <!--<div class=" grid grid-cols-2 border-b-2 pb-2 snap-start snap-mandatory">
             <img src="{{ asset('user/assets/img/Car 9.jpg') }}"
               class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
@@ -77,10 +83,10 @@
                 style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
 
-          </div>
+          </div>-->
 
           <!-- article 4 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
+          <!--<div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" {{ asset('user/assets/img/Car 9.jpg') }}"
               class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
@@ -93,10 +99,10 @@
                 style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
 
-          </div>
+          </div>-->
 
           <!-- article 5 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
+          {{-- <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" {{ asset('user/assets/img/Car 9.jpg') }}"
               class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
@@ -109,10 +115,10 @@
                 style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
 
-          </div>
+          </div> --}}
 
           <!-- article 6 -->
-          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
+          {{-- <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
             <img src=" {{ asset('user/assets/img/Car 9.jpg') }}"
               class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
@@ -125,7 +131,7 @@
                 style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
             </div>
 
-          </div>
+          </div> --}}
 
 
         </div>
