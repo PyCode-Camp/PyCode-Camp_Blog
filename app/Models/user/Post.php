@@ -22,14 +22,14 @@ class Post extends Model
     public function tags (): BelongsToMany
     {
 
-      return $this->BelongsToMany('App\Models\user\tag','post_tags');
+      return $this->BelongsToMany('App\Models\user\tag','post_tags')->withTimestamps();
 
     }
 
 
     public function categories(){
 
-      return $this->belongsToMany('App\Models\user\category','category_posts');
+      return $this->belongsToMany('App\Models\user\category','category_posts')->withTimestamps();
     }
 
     //

@@ -12,9 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('category_posts', function (Blueprint $table) {
-            $table->id();
-            $table->integer('post_id');
-            $table->integer('category_id');
+            $table->foreignId('post_id')->constrained()->onDelete('cascade');
+            $table->integer('category_id')->unsigned()->index();
             $table->timestamps();
         });
     }

@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('subtitle', '255');
             $table->string('slug','200');
             $table->text('body');
-            $table->boolean('status');
-            $table->integer('posted_by');
-            $table->string('image');
+            $table->boolean('status')->nullable();
+            $table->integer('posted_by')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
 
         });
