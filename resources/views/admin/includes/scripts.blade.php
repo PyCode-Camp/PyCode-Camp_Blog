@@ -17,10 +17,19 @@
 <script src="{{ asset('admin/dist/js/app.min.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!-- CK Editor -->
+
 <script src="{{ asset('admin/plugins/ckeditor/ckeditor.js')}}"></script>
 {{-- <script src="{{ asset('admin/dist/js/pages/dashboard.js') }}"></script> --}}
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('admin/dist/js/demo.js') }}"></script>
+
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 
 <script>
     $(function () {
