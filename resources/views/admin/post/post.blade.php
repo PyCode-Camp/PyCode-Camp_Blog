@@ -69,7 +69,7 @@
                             @endif
                             <!-- /.box-header -->
                             <!-- form start -->
-                            <form role="form" method="POST" action="{{ route('post.store') }}">
+                            <form role="form" method="POST" action="{{ route('post.store') }}" enctype="multipart/form-data">
 
                                 {{ csrf_field() }}
                                 <div class="box-body">

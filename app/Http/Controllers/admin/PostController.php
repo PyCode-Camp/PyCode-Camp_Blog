@@ -43,8 +43,12 @@ class PostController extends Controller
             'subtitle' => 'required|string|max:255',
             'slug' => 'required',
             'body' => 'required',
+            'image'=>'required',
         ]);
        
+        if($request->hasFile('image')){
+            $postImage = $request->image->store('public');
+        }
 
         $post = new Post;
 
@@ -53,6 +57,7 @@ class PostController extends Controller
         $post->slug = $request->slug;
         $post->body = $request->body;
         $post->status = $request->status;
+        $post->image = $postImage;
        
         $post->save();
 
