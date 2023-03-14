@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('post_tags', function (Blueprint $table) {
-            $table->id();
-            $table->integer('post_id');
-            $table->integer('tag_id');
+    
+            $table->foreignId('post_id')->constrained()->onDelete('cascade');
+            $table->integer('tag_id')->unsigned()->index();
             $table->timestamps();
         });
     }

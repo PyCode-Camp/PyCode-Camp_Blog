@@ -3,7 +3,23 @@
 
 <head>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     @include('admin.includes.head')
+
+    <style>
+
+        /* select2.min.css | https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css */
+        
+        .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+          
+          position:relative !important; 
+        }
+        
+    </style>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -81,19 +97,53 @@
 
                                     <div class="col-lg-6">
 
-                                        <div class="form-group">
-                                            <label for="image">File input</label>
-                                            <input type="file" name="image" id="image">
-                                            <br><br>
-                                            <div class="Publish">
-                                                <label>
-                                                    <input type="checkbox" name="status"> Check me out
-                                                </label>
-                                            </div>
+                                        <br>
+ 
+                                         <div class="form-group">
+ 
+                                             <div class="pull-right">
+                                                 <label for="image">File input</label>
+                                                 <input type="file" name="image" id="image" >
+                                             </div>
+                                             
+                                             
+                                             <div class="Publish pull-left">
+                                                 <label>
+                                                     <input class="" type="checkbox" name="status" value="1">  <span class="" style="margin-left: 2px;">Publish</span>
+                                                 </label>
+                                             </div>
+ 
+                                         </div>
+ 
+                                         <br><br>
+ 
+                                          {{-- multiple select --}}
+                                          <div class="form-group">
+                                             <label>Select Tags</label>
+                                             <select class="form-control select2" multiple="multiple" name="tags[]" 
+                                                     style="width: 100%;" >
+                                               
+                                                    @foreach ($tags as $tag )
+                                                    <option value={{ $tag->id }}>{{ $tag->name }}</option>
+                                                    @endforeach
+                                                     
+                                              
+                                             </select>
+                                           </div>
+ 
+                                            {{-- multiple select --}}
+                                          <div class="form-group">
+                                             <label>Select Categories</label>
+                                             <select class="form-control select2" multiple="multiple" name="categories[]" 
+                                                     style="width: 100%;">
 
-                                        </div>
-
-                                    </div>
+                                                     @foreach ($categories as $category )
+                                                     <option value={{ $category->id }}>{{ $category->name }}</option>
+                                                     @endforeach
+                                             </select>
+                                           </div>
+ 
+                                     </div>
                                 </div>
                                 <!-- /.box-body -->
 
@@ -113,8 +163,8 @@
                                     <!-- /.box-header -->
                                     <div class="box-body pad">
 
-                                        <textarea class="textarea" placeholder="Place some text here" name="body"
-                                            style="width: 100%; height: 300px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                                        <textarea class="form-control"  name="body"
+                                            style="width: 100%; height: 300px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" id="editor1"></textarea>
 
                                     </div>
                                 </div>
@@ -145,7 +195,23 @@
         @include('admin.includes.footer')
     </footer>
 
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2({
+                placeholder:"Select a State"
+            });
+        });
+    </script>
+    
+
+
     @include('admin.includes.scripts')
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+        <!-- Select2 -->
+        <script src="{{ asset('admin/plugins/select2/select2.full.min.js')}}"></script>
+        <!-- iCheck 1.0.1 -->
+        <script src="{{ asset('admin/plugins/iCheck/icheck.min.js')}}"></script>
 </body>
 
 </html>

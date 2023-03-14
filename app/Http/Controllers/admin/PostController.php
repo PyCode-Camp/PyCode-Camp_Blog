@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\admin;
 
 
+use App\Models\user\category;
 use App\Models\user\Post;
+use App\Models\user\tag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
@@ -15,7 +17,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::all()->sortByDesc('created_at');
        return view('admin.index', compact('posts'));
     }
 
@@ -24,8 +26,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        
-        return view('admin.post.post');
+        $tags = tag::all();
+        $categories = category::all();
+        return view('admin.post.post', compact('tags','categories'));
     }
 
     /**
@@ -49,7 +52,12 @@ class PostController extends Controller
         $post->subtitle = $request->subtitle;
         $post->slug = $request->slug;
         $post->body = $request->body;
+        $post->status = $request->status;
+       
         $post->save();
+
+        $post->tags()->sync($request->tags);
+        $post->categories()->sync($request->categories);
         
         return redirect(route('post.index'));
       
@@ -68,15 +76,18 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-
-        return view('admin.post.edit',compact('post'));
+        $post->with('tags','categories');
+        $tags = tag::all();
+        $categories = category::all();
+        return view('admin.post.edit',compact('post', 'tags', 'categories'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Post $post): RedirectResponse
+    public function update(Request $request, Post $post)
     {
+        
 
         $validated = $request->validate([
             
@@ -84,10 +95,16 @@ class PostController extends Controller
             'subtitle' => 'required|string|max:255',
             'slug' => 'required',
             'body' => 'required',
-
+            
         ]);
 
+
         $post->update($validated);
+        $post->status = $request->status;
+        $post->save();
+        $post->tags()->sync($request->tags);
+        $post->categories()->sync($request->categories);
+        
 
        
 

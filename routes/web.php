@@ -17,12 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'App\Http\Controllers\user'], function(){
 
   Route::get('/', 'HomeController@index');
+  Route::get('post/{post}', 'UserPostController@post')->name('post');
 });
 
-Route::get('post', function(){
+//Route::get('post', function(){
 
-  return view('user.main-post');
-})->name('Userpost');
+//  return view('user.main-post');
+//})->name('Userpost');
+
 
 Route::get('/team', function(){
 
