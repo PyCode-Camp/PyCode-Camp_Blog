@@ -25,12 +25,13 @@ Route::group(['namespace' => 'App\Http\Controllers\user'], function(){
 //  return view('user.main-post');
 //})->name('Userpost');
 
-
+//
 Route::get('/team', function(){
 
   return view('user.team');
 })->name('team');
 
+//
 Route::get('/advertise', function(){
 
   return view('user.advertise-withus');
@@ -52,6 +53,11 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin'], function(){
   Route::resource('admin/tag', 'TagController');
 
 });
+
+Route::get('admin-login', function(){
+
+  return view('admin.login');
+})->name('admin-login');
 
 
 
