@@ -7,7 +7,7 @@
 
             <div class="container mx-auto flex flex-col justify-center items-center">
                 <img
-                    class=" object-cover object-center md:w-56 md:h-32 lg:w-auto lg:h-80 rounded"src="{{ asset('user/assets/img/Car 14.jpg') }}">
+                    class=" object-cover object-center md:w-56 md:h-32 lg:w-auto lg:h-80 rounded"src="{{ Storage::disk('local')->url($post->image) }}">
             </div>
             <br>
 

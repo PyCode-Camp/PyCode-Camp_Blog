@@ -35,7 +35,7 @@
             
             <!-- article 1 -->
           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start snap-mandatory">
-            <img src=" {{ asset('user/assets/img/Car 9.jpg') }}"
+            <img src=" {{ Storage::disk('local')->url($post->image) }}"
               class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
               <a href="{{ route('post', $post->slug)}}">
@@ -145,7 +145,7 @@
           @foreach ($posts as $post)
             
           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start w-full bg-amber-600">
-            <img src=" {{ asset('user/assets/img/Car 9.jpg') }}"
+            <img src=" {{ Storage::disk('local')->url($post->image) }}"
               class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
             <a href="#">
@@ -159,100 +159,7 @@
 
           </div> 
           @endforeach
-          
-
-          {{-- <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src=" {{ asset('user/assets/img/Car 9.jpg') }}"
-              class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
-            <div class="relative">
-            <a href="#">
-              <h3
-                class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
-                Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              </a>
-              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
-                style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
-            </div>
-
-          </div>  --}}
-
-          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            {{-- <img src=" {{ asset('user/assets/img/Car 9.jpg') }}"
-              class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
-            <div class="relative">
-            <a href="#">
-              <h3
-                class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
-                Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              </a>
-              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
-                style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
-            </div> --}}
-
-          </div> 
-          
-          
          
-          <!-- article 2 -->
-          <!--<div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src="{{ asset('user/assets/img/Car 14.jpg') }}"
-              class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
-            <div class="relative">
-              <h3
-                class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
-                Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
-                style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
-            </div>
-
-          </div>-->
-
-          <!-- article 3 -->
-          <!--<div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src="{{ asset('user/assets/img/Car 14.jpg') }}"
-              class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
-            <div class="relative">
-              <h3
-                class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
-                Students of ktu sch are very very horny bastards so beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
-                style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
-            </div>
-
-          </div>-->
-
-          <!-- article 4 -->
-          <!--<div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src=" {{ asset('user/assets/img/Car 14.jpg') }}" class="w-[144px] h-[90px] object-cover" alt="Pic1">
-            <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so
-                beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
-            </div>
-
-          </div>-->
-
-          <!-- article 5 -->
-          <!--<div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src=" {{ asset('user/assets/img/Car 14.jpg') }}" class="w-[144px] h-[90px] object-cover" alt="Pic1">
-            <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so
-                beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
-            </div>
-
-          </div>-->
-
-          <!-- article 6 -->
-          <!--<div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src=" {{ asset('user/assets/img/Car 14.jpg') }}" class="w-[144px] h-[90px] object-cover" alt="Pic1">
-            <div class="relative">
-              <h3 class=" text-[15px] leading-[18.9px] font-bold">Students of ktu sch are very very horny bastards so
-                beware let that be a learn to you</h3>
-              <p class="text-[12px] absolute top-[76px]" style="color: rgba(15, 15, 15, 0.74);">Feb 14 8 min read</p>
-            </div>
-
-          </div>-->
         </div>
 
         <!-- Panel-3 -->
@@ -264,7 +171,7 @@
           @foreach ($trendCategories as $trendPost)
             
           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start">
-            <img src=" {{ asset('user/assets/img/Car 9.jpg') }}"
+            <img src=" {{ Storage::disk('local')->url($trendPost->image) }}"
               class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
             <a href="#">

@@ -71,7 +71,7 @@
                             @endif
                             <!-- /.box-header -->
                             <!-- form start -->
-                            <form role="form" method="POST" action="{{ route('post.update', $post) }}">
+                            <form role="form" method="POST" action="{{ route('post.update', $post) }}" enctype="multipart/form-data">
 
                                 {{ csrf_field() }}
                                 {{ method_field('PATCH') }}
