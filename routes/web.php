@@ -56,16 +56,13 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'middleware'=>'auth:a
 
 });
 
-  //
+
+  //Admin login routess
   Route::get('admin-login', 'App\Http\Controllers\Admin\Auth\LoginController@showLoginForm')->name('admin.login');
   Route::post('admin-login', 'App\Http\Controllers\Admin\Auth\LoginController@authenticate');
   Route::post('admin-logout', 'App\Http\Controllers\Admin\Auth\LoginController@Logout')->name('admin.logout');
 
-// Admin login routes
-//Route::get('admin-login', function(){
 
- // return view('admin.login');
-//})->name('admin.login');
 
 
 
