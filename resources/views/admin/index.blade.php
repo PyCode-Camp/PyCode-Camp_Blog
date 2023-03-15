@@ -14,7 +14,13 @@
     <h1>
       Dashboard
       <small>Control panel</small>
+      <form action="{{ route('admin.logout')}}" method="post" >
+        {{ csrf_field() }}
+        <button type="submit" class="col-lg-offset-10 btn btn-danger">Logout</button>
+      </form>
     </h1>
+
+    
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Dashboard</li>
