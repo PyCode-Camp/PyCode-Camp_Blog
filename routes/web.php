@@ -57,7 +57,9 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin'], function(){
 Route::get('admin-login', function(){
 
   return view('admin.login');
-})->name('admin-login');
+})->name('admin.login');
+
+Route::post('admin-login', 'App\Http\Controllers\admin\Auth\LoginController@authenticate');
 
 
 

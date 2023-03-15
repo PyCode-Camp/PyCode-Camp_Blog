@@ -36,16 +36,19 @@
   <div class="login-box-body">
     <p class="login-box-msg">Sign in </p>
 
-    <form action="#" method="post">
+     {{-- display error messages --}}
+     @include('admin.includes.errorMessages')
+     
+    <form action="{{ route('admin.login')}}" method="post">
 
       {{ csrf_field() }}
 
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Name">
+        <input type="email" class="form-control" name="email" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" name="password" class="form-control" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
