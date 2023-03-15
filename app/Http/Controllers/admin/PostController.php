@@ -43,8 +43,12 @@ class PostController extends Controller
             'subtitle' => 'required|string|max:255',
             'slug' => 'required',
             'body' => 'required',
+            'image'=>'required',
         ]);
        
+        if($request->hasFile('image')){
+            $postImage = $request->image->store('public');
+        }
 
         $post = new Post;
 
@@ -53,6 +57,7 @@ class PostController extends Controller
         $post->slug = $request->slug;
         $post->body = $request->body;
         $post->status = $request->status;
+        $post->image = $postImage;
        
         $post->save();
 
@@ -95,13 +100,24 @@ class PostController extends Controller
             'subtitle' => 'required|string|max:255',
             'slug' => 'required',
             'body' => 'required',
+            'image' => 'required',
             
         ]);
 
+        if( $request->hasFile('image')){
+            $imageName = $request->image->store('public');
+        }
+        
 
+        //
         $post->update($validated);
+        
+        //
         $post->status = $request->status;
+        $post->image = $imageName;
         $post->save();
+
+        //
         $post->tags()->sync($request->tags);
         $post->categories()->sync($request->categories);
         

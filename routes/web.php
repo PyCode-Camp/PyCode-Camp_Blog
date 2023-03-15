@@ -25,12 +25,13 @@ Route::group(['namespace' => 'App\Http\Controllers\user'], function(){
 //  return view('user.main-post');
 //})->name('Userpost');
 
-
+//
 Route::get('/team', function(){
 
   return view('user.team');
 })->name('team');
 
+//
 Route::get('/advertise', function(){
 
   return view('user.advertise-withus');
@@ -40,7 +41,7 @@ Route::get('/advertise', function(){
 
 
 // Admin Routes
-Route::group(['namespace' => 'App\Http\Controllers\Admin'], function(){
+Route::group(['namespace' => 'App\Http\Controllers\Admin', 'middleware'=>'auth:admin'], function(){
 
   //Post Routes
   Route::resource('admin/post','PostController');
@@ -51,7 +52,24 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin'], function(){
   //Tag Routes
   Route::resource('admin/tag', 'TagController');
 
+
+
 });
+
+  //
+  Route::get('admin-login', 'App\Http\Controllers\Admin\Auth\LoginController@showLoginForm')->name('admin.login');
+  Route::post('admin-login', 'App\Http\Controllers\Admin\Auth\LoginController@authenticate');
+  Route::post('admin-logout', 'App\Http\Controllers\Admin\Auth\LoginController@Logout')->name('admin.logout');
+
+// Admin login routes
+//Route::get('admin-login', function(){
+
+ // return view('admin.login');
+//})->name('admin.login');
+
+
+
+
 
 
 
