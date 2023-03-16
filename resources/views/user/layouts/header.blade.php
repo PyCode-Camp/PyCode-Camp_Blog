@@ -37,18 +37,18 @@
 
 
         <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none ">
-          <a href=""
-            class="nav-link  flex md:h-fit h-[55px] items-center hover:text-amber-400 hover:duration-500">News</a>
+          <a href="{{ route('home')}}"
+            class="nav-link  flex md:h-fit h-[55px] items-center hover:text-amber-400 hover:duration-500">Home</a>
         </li>
 
 
         <li class="nav-item  md:w-fit w-full  border-[#A6A4A4] border-b-2 md:border-none  ">
-          <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">LifeStyle</a>
+          <a href="" class="nav-link hover:text-amber-400 hover:duration-500 flex md:h-fit h-[55px] items-center">News</a>
         </li>
 
 
         <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none  ">
-          <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">Sports</a>
+          <a href="{{ route('team')}}" class="nav-link  hover:text-amber-400 hover:duration-500 flex md:h-fit h-[55px] items-center">About</a>
         </li>
 
 
