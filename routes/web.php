@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 // User Routes
 Route::group(['namespace' => 'App\Http\Controllers\user'], function(){
 
-  Route::get('/', 'HomeController@index');
+  Route::get('/', 'HomeController@index')->name('home');
   Route::get('post/{post}', 'UserPostController@post')->name('post');
 });
 
@@ -57,7 +57,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'middleware'=>'auth:a
 });
 
 
-  //Admin login routess
+  //Admin login routes
   Route::get('admin-login', 'App\Http\Controllers\Admin\Auth\LoginController@showLoginForm')->name('admin.login');
   Route::post('admin-login', 'App\Http\Controllers\Admin\Auth\LoginController@authenticate');
   Route::post('admin-logout', 'App\Http\Controllers\Admin\Auth\LoginController@Logout')->name('admin.logout');

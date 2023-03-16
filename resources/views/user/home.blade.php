@@ -31,20 +31,20 @@
         <!-- Panel 1 -->
         <div role="tabpanel" id="panel-1" class="tab-panel p-1 transition duration-300">
 
-          @foreach ($posts as $post)
+          @foreach ($featuredPosts as $featuredPost)
             
             <!-- article 1 -->
           <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start snap-mandatory">
-            <img src=" {{ Storage::disk('local')->url($post->image) }}"
+            <img src=" {{ Storage::disk('local')->url($featuredPost->image) }}"
               class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
-              <a href="{{ route('post', $post->slug)}}">
+              <a href="{{ route('post', $featuredPost->slug)}}">
               <h3
                 class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
-                  {{ $post->title }}</h3>
+                  {{ $featuredPost->title }}</h3>
               </a>
               <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
-                style="color: rgba(15, 15, 15, 0.74);">{{$post->created_at->format('j M Y')}} 8 min read</p>
+                style="color: rgba(15, 15, 15, 0.74);">{{$featuredPost->created_at->format('j M Y')}} 8 min read</p>
             </div>
 
           </div>
@@ -148,7 +148,7 @@
             <img src=" {{ Storage::disk('local')->url($post->image) }}"
               class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
-            <a href="#">
+              <a href="{{ route('post', $post->slug)}}">
               <h3
                 class=" text-[15px]  leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
                 {{ $post->title }} </h3>
@@ -174,7 +174,7 @@
             <img src=" {{ Storage::disk('local')->url($trendPost->image) }}"
               class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
-            <a href="#">
+              <a href="{{ route('post', $trendPost->slug)}}">
               <h3
                 class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
                 {{ $trendPost->title }} </h3>
