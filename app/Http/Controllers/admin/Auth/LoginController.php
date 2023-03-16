@@ -14,7 +14,8 @@ class LoginController extends Controller
 
 
 
-    public function showLoginForm(){
+    public function showLoginForm()
+    {
 
         return view('admin.login');
     }
@@ -47,6 +48,9 @@ class LoginController extends Controller
 
 
 
+
+
+
     /**
      * Log the user out of the application.
      */
@@ -59,5 +63,11 @@ class LoginController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('admin-login');
+    }
+
+    public function __construct()
+    {
+
+        $this->middleware('guest:admin')->except('logout');
     }
 }
