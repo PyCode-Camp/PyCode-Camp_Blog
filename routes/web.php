@@ -21,10 +21,7 @@ Route::group(['namespace' => 'App\Http\Controllers\user'], function(){
   Route::get('/search', 'BlogController@search')->name('blog.search');
 });
 
-//Route::get('post', function(){
 
-//  return view('user.main-post');
-//})->name('Userpost');
 
 //
 Route::get('/team', function(){

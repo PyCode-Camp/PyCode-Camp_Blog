@@ -9,7 +9,7 @@
     <ion-icon name="menu" class="icon text-3xl cursor-pointer md:hidden text-white" id="ico"
       onclick="onToggleMenu(this)"></ion-icon>
     <!--  -->
-    <div class="brand-icon text-white ">PyCode-Camp</div>
+    <div class="brand-icon text-white text-xl "><span class=" text-red-500">Py</span>Code-Camp</div>
 
     <ion-icon name="search-outline" class="icon text-3xl cursor-pointer md:hidden text-white searchIcon"
       id="searchIco" onclick="onToggleSearch(this)"></ion-icon>
