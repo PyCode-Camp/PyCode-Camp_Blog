@@ -36,7 +36,7 @@
       <ul class="flex flex-col md:flex-row items-center md:gap-[2vw] font-semibold text-lg">
 
         <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none md:hidden">
-          <a href="" class="nav-link  flex md:h-fit h-[61px] items-center">PyCode-Camp</a>
+          <a href="https://pycode-camp.netlify.app/" target="_blank" class="nav-link  flex md:h-fit h-[61px] items-center">PyCode-Camp</a>
         </li>
 
 

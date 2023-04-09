@@ -67,8 +67,8 @@
                         Reina
                     </p>
                     <p class="text-center">
-                        <img class="w-32 h-16 " src="{{ asset('user/assets/img/Car 14.jpg') }}" />
-                        Melvin 360
+                        <img class="w-32 h-16 " src="{{ asset('user/assets/img/Agus2.jpeg') }}" />
+                       Sarah
                     </p>
                 </div>
                 <br>
@@ -101,8 +101,8 @@
                         Eric
                     </p>
                     <p class="text-center">
-                        <img class="w-32 h-16 " src="{{ asset('user/assets/img/kobby.jpeg') }}" />
-                        Melvin 360
+                        <img class="w-32 h-16 " src="{{ asset('user/assets/img/Agus2.jpeg') }}" />
+                       Augustine
                     </p>
                 </div>
 
