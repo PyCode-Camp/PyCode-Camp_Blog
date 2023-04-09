@@ -18,12 +18,10 @@ Route::group(['namespace' => 'App\Http\Controllers\user'], function(){
 
   Route::get('/', 'HomeController@index')->name('home');
   Route::get('post/{post}', 'UserPostController@post')->name('post');
+  Route::get('/search', 'BlogController@search')->name('blog.search');
 });
 
-//Route::get('post', function(){
 
-//  return view('user.main-post');
-//})->name('Userpost');
 
 //
 Route::get('/team', function(){

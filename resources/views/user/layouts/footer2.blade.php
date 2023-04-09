@@ -7,16 +7,16 @@
         <nav class="list-none mb-10 " >
           <ul class="list-disc">
           <li>
-            <a class="text-gray-600 hover:text-gray-800">News</a>
+            <a href=" {{ route('home')}}" class="text-gray-600 hover:text-gray-800">News</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Bussiness</a>
+            <a href=" {{ route('home')}}" class="text-gray-600 hover:text-gray-800">Bussiness</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Entertainment</a>
+            <a href=" {{ route('home')}}" class="text-gray-600 hover:text-gray-800">Entertainment</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Sports</a>
+            <a href=" {{ route('home')}}" class="text-gray-600 hover:text-gray-800">Sports</a>
           </li>
           </ul>
         </nav>
@@ -27,10 +27,10 @@
         <nav class="list-none mb-10">
           <ul class="list-disc">
           <li>
-            <a class="text-gray-600 hover:text-gray-800">About us</a>
+            <a href=" {{ route('team')}}" class="text-gray-600 hover:text-gray-800">About us</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Advertiste</a>
+            <a href="{{ route('advertise') }}" class="text-gray-600 hover:text-gray-800">Advertiste</a>
           </li>
           <li>
             <a class="text-gray-600 hover:text-gray-800">terms & conditions</a>
@@ -47,16 +47,16 @@
         <nav class="list-none mb-10">
           <ul class="list-disc">
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Facebook</a>
+            <a href="" class="text-gray-600 hover:text-gray-800">Facebook</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Twiter</a>
+            <a href="" class="text-gray-600 hover:text-gray-800">Twiter</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Instagram</a>
+            <a href="" class="text-gray-600 hover:text-gray-800">Instagram</a>
           </li>
           <li>
-            <a class="text-gray-600 hover:text-gray-800">Tiktok</a>
+            <a href="" class="text-gray-600 hover:text-gray-800">Github</a>
           </li>
           </ul>
         </nav>

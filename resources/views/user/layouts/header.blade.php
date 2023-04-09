@@ -9,18 +9,22 @@
     <ion-icon name="menu" class="icon text-3xl cursor-pointer md:hidden text-white" id="ico"
       onclick="onToggleMenu(this)"></ion-icon>
     <!--  -->
-    <div class="brand-icon text-white ">PyCode-Camp</div>
+    <div class="brand-icon text-white text-xl "><span class=" text-red-500">Py</span>Code-Camp</div>
 
     <ion-icon name="search-outline" class="icon text-3xl cursor-pointer md:hidden text-white searchIcon"
       id="searchIco" onclick="onToggleSearch(this)"></ion-icon>
 
     <div class=" absolute top-[15vh] left-[18%] z-50 ">
       <div class=" relative hidden transition-all ease-in duration-700 " id="search">
+       <form action="{{ route('blog.search') }}" method="get">
+        
+
         <ion-icon name="search-outline" class="text-white absolute text-2xl top-[10px] left-[3px] z-10"></ion-icon>
         <input type="text " id="searchIn"
           class=" h-[43px] bg-[#BDBBBB] py-3 p-7 rounded-full focus:outline-none focus:ring-1 focus:ring-sky-500 "
-          placeholder="Search">
-        <ion-icon name="mic-outline" class="text-red-500 absolute top-[11px] right-[10px] text-lg"></ion-icon>
+          placeholder="Search" name="keyword">
+        <button type="submit" name="submit"><ion-icon name="send-outline" class="text-red-500 absolute top-[11px] right-[10px] text-lg"></ion-icon></button>
+       </form>
       </div>
     </div>
     <!--  -->
@@ -32,7 +36,7 @@
       <ul class="flex flex-col md:flex-row items-center md:gap-[2vw] font-semibold text-lg">
 
         <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none md:hidden">
-          <a href="" class="nav-link  flex md:h-fit h-[61px] items-center">PyCode-Camp</a>
+          <a href="https://pycode-camp.netlify.app/" target="_blank" class="nav-link  flex md:h-fit h-[61px] items-center">PyCode-Camp</a>
         </li>
 
 

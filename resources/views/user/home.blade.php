@@ -2,6 +2,9 @@
 
 @section('main-content')
 
+  @if(@isset($keyword))
+  <h1 class=" text-center text-green-600">Search Results for "{{ $keyword }}"</h1>
+  @endif
   <!-- Section tab -->
   <div class="container mx-auto px-4 mb-4 md:mb-10">
     <div class="">
@@ -144,7 +147,7 @@
 
           @foreach ($posts as $post)
             
-          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start w-full bg-amber-600">
+          <div class=" grid grid-cols-2 border-b-2 pb-2 snap-start w-full ">
             <img src=" {{ Storage::disk('local')->url($post->image) }}"
               class="w-[144px] h-[90px] md:w-56 md:h-32 lg:w-auto lg:h-52 object-cover" alt="Pic1">
             <div class="relative">
