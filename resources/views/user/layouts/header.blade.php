@@ -1,5 +1,5 @@
  <!--  -->
- <header class="heading mb-3 bg-image object-cover object-center img-fluid rounded-b-[30px] overflow-hidden">
+ <header class="heading mb-3 bg-image object-cover object-center img-fluid overflow-hidden">
 
 <!-- h-[88px] -->
 <nav class=" nav shadow-xl md:max-w-full">
@@ -9,7 +9,7 @@
     <ion-icon name="menu" class="icon text-3xl cursor-pointer md:hidden text-white" id="ico"
       onclick="onToggleMenu(this)"></ion-icon>
     <!--  -->
-    <div class="brand-icon text-white text-xl "><span class=" text-red-500">Py</span>Code-Camp</div>
+    <div class="brand-icon text-white text-xl "><span class=" text-red-500">Py</span><span class="text-green-500">Co</span><span class="text-sky-700">de</span>-<span class=" text-amber-600">Camp</span></div>
 
     <ion-icon name="search-outline" class="icon text-3xl cursor-pointer md:hidden text-white searchIcon"
       id="searchIco" onclick="onToggleSearch(this)"></ion-icon>
@@ -36,7 +36,7 @@
       <ul class="flex flex-col md:flex-row items-center md:gap-[2vw] font-semibold text-lg">
 
         <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none md:hidden">
-          <a href="https://pycode-camp.netlify.app/" target="_blank" class="nav-link  flex md:h-fit h-[61px] items-center">PyCode-Camp</a>
+          <a href="https://pycode-camp.com/" target="_blank" class="nav-link  flex md:h-fit h-[61px] items-center">PyCode-Camp</a>
         </li>
 
 
