@@ -67,7 +67,7 @@
                         Reina
                     </p>
                     <p class="text-center">
-                        <img class="w-32 h-16 " src="{{ asset('user/assets/img/Agus2.jpeg') }}" />
+                        <img class="w-32 h-16 " src="{{ asset('user/assets/img/sarah.jpeg') }}" />
                        Sarah
                     </p>
                 </div>
