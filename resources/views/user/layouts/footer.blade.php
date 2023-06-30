@@ -34,9 +34,7 @@
       <input type="submit" class="text-[12px] text-white capitalize bg-red-600 px-2 rounded-r-full" name="subcribe" value="subscribe" >
     </form>
 
-    <!-- <input type="submit"
-        class="border-1 text-[9px] font-[600] pt-[6px] pb-[2px] px-[7px] -ml-[3.5px]  rounded-r-full text-center text-white bg-red-600"
-        value="subscribe" name="subscribe"> -->
+   
 
   </div>
 
