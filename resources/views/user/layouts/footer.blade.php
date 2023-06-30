@@ -5,10 +5,10 @@
 
   <a href=""><ion-icon name="logo-twitter" class=" border-2 border-cyan-500 rounded-full p-2 text-cyan-500 mx-2 "></ion-icon></a>
  <a href="">  <ion-icon name="logo-google" class=" border-2 border-red-700 rounded-full p-2 text-red-700 mr-2"></ion-icon></a>
-  <a href=""><ion-icon name="logo-linkedin" class="border-2 border-blue-500 rounded-full p-2 text-blue-500 mr-2 "></ion-icon></a>
-  <a href=""> <ion-icon name="logo-instagram" class=" border-2   border-red-800 rounded-full p-2 text-red-800 mr-2"></ion-icon></a>
- <a href="">  <ion-icon name="logo-facebook" class=" border-2 border-blue-700 rounded-full p-2 text-blue-700 mr-2"></ion-icon></a>
- <a href="">  <ion-icon name="logo-youtube" class="border-2 border-red-600 rounded-full p-2 text-red-600 mr-2"></ion-icon></a>
+  <a href="https://www.linkedin.com/company/pycode-camp/"><ion-icon name="logo-linkedin" class="border-2 border-blue-500 rounded-full p-2 text-blue-500 mr-2 "></ion-icon></a>
+  <!-- <a href=""> <ion-icon name="logo-instagram" class=" border-2   border-red-800 rounded-full p-2 text-red-800 mr-2"></ion-icon></a> -->
+ <a href="https://web.facebook.com/profile.php?id=100090511214271">  <ion-icon name="logo-facebook" class=" border-2 border-blue-700 rounded-full p-2 text-blue-700 mr-2"></ion-icon></a>
+ <a href="https://www.youtube.com/channel/UCJGcwuOMvfxADdzlD5xCcRQ">  <ion-icon name="logo-youtube" class="border-2 border-red-600 rounded-full p-2 text-red-600 mr-2"></ion-icon></a>
 
 </div>
 </section>
