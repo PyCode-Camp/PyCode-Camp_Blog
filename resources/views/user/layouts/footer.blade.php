@@ -24,14 +24,14 @@
     <h4 class=" text-[9px] leading-3"
       style="text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25); color: rgba(30, 30, 30, 0.41);">Sign with your email
       Account</h4>
-    <form action="" class="flex gap-x-2 mt-[2px]">
+    <form action="" class="flex sm:gap-2 mt-[2px]">
       <div class="sm:w-[75%]">
       <input type="email"
-        class=" sm:w-full text-[11px] font-[600] p-2 focus:outline-none focus:ring-1 focus:border-sky-500 focus:ring-sky-500 
+        class=" sm:w-full min-w-[92%] max-w-[92%] sm:min-w-full sm:max-w-full text-[11px] font-[600] p-2 focus:outline-none focus:ring-1 focus:border-sky-500 focus:ring-sky-500 
           outline-none rounded-l-full bg-slate-900/20 invalid:border-pink-600 invalid:text-pink-600 focus:invalid:border-pink-600 focus:invalid:ring-pink-500"
         style="color:rgba(30, 30, 30, 0.41);">
       </div>
-      <input type="submit" class="text-[12px] text-white capitalize bg-red-600 px-2 rounded-r-full" name="subcribe" value="subscribe" >
+      <input type="submit" class="text-[12px] text-white capitalize bg-red-600 px-2 sm:ml-0 ml-[-3px]  rounded-r-full" name="subcribe" value="subscribe" >
     </form>
 
    
