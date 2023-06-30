@@ -24,19 +24,23 @@
     <h4 class=" text-[9px] leading-3"
       style="text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25); color: rgba(30, 30, 30, 0.41);">Sign with your email
       Account</h4>
-    <form action="">
+    <form action="" class="flex gap-x-2 mt-[2px]">
+      <div class="sm:w-[75%]">
       <input type="email"
-        class=" h-[21px] w-[106px] text-[11px] font-[600] p-2 focus:outline-none focus:ring-1 focus:border-sky-500 focus:ring-sky-500 
+        class=" sm:w-full text-[11px] font-[600] p-2 focus:outline-none focus:ring-1 focus:border-sky-500 focus:ring-sky-500 
           outline-none rounded-l-full bg-slate-900/20 invalid:border-pink-600 invalid:text-pink-600 focus:invalid:border-pink-600 focus:invalid:ring-pink-500"
         style="color:rgba(30, 30, 30, 0.41);">
-      <input type="submit"
-        class="border-1 text-[9px] font-[600] pt-[6px] pb-[2px] px-[7px] -ml-[3.5px]  rounded-r-full text-center text-white bg-red-600"
-        value="subscribe" name="subscribe">
+      </div>
+      <input type="submit" class="text-[12px] text-white capitalize bg-red-600 px-2 rounded-r-full" name="subcribe" value="subscribe" >
     </form>
+
+    <!-- <input type="submit"
+        class="border-1 text-[9px] font-[600] pt-[6px] pb-[2px] px-[7px] -ml-[3.5px]  rounded-r-full text-center text-white bg-red-600"
+        value="subscribe" name="subscribe"> -->
 
   </div>
 
-  <div class=" flex gap-7 sm:w-1/2">
+  <div class=" flex gap-x-4 sm:gap-x-10 sm:w-1/2">
     <a href="#"> <img src=" {{ asset('user/assets/img/Car 9.jpg') }}" class="h-[33px] w-[33px] object-cover rounded-full bg-primary border-2 border-spacing-1 border-red-800 p-0.5" alt=""></a>
    <a href="#"> <img src=" {{ asset('user/assets/img/Car 9.jpg') }}" class="h-[33px] w-[33px] object-cover rounded-full bg-secondary border-2 border-spacing-1 border-red-800 p-0.5" alt=""></a> 
     <a href=""><img src=" {{ asset('user/assets/img/Car 9.jpg') }}" class="h-[33px] w-[33px] object-cover rounded-full bg-dark border-2 border-spacing-1 border-red-800 p-0.5"
