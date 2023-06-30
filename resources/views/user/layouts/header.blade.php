@@ -9,7 +9,7 @@
     <ion-icon name="menu" class="icon text-3xl cursor-pointer md:hidden text-white" id="ico"
       onclick="onToggleMenu(this)"></ion-icon>
     <!--  -->
-    <div class="brand-icon text-white text-xl "><span class=" text-red-500">Py</span><span class="text-green-500">Co</span><span class="text-sky-700">de</span>-<span class=" text-amber-600">Camp</span></div>
+    <div class="brand-icon text-white text-xl uppercase"><span class=" text-red-500">Py</span><span class="text-green-500">Co</span><span class="text-sky-700">de</span>-<span class=" text-amber-600">Camp</span></div>
 
     <ion-icon name="search-outline" class="icon text-3xl cursor-pointer md:hidden text-white searchIcon"
       id="searchIco" onclick="onToggleSearch(this)"></ion-icon>
@@ -30,7 +30,7 @@
     <!--  -->
     <div
       class="navbar-nav z-50 shadow-lg md:shadow-none transition-all md:transition-none ease-in duration-700 bg-[#015E7D] text-[#FFFFFF] md:bg-transparent 
-              md:static absolute md:z-auto  opacity-0 md:opacity-100 md:min-h-fit min-h-[50vh] left-0  md:w-fit w-[267px] top-[-400px] px-5 rounded-tr-[30px]"
+              md:static absolute md:z-auto  opacity-0 md:opacity-100 md:min-h-fit min-h-[290px] max-h-[290px] md:max-h-fit left-0  md:w-fit w-[267px] top-[-400px] px-5 "
       id="navBar">
 
       <ul class="flex flex-col md:flex-row items-center md:gap-[2vw] font-semibold text-lg">
@@ -56,14 +56,10 @@
         </li>
 
 
-        <li class="nav-item  md:w-fit w-full border-[#A6A4A4] border-b-2 md:border-none  ">
+        <li class="nav-item  md:w-fit w-full md:border-none  ">
           <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">Business</a>
         </li>
 
-
-        <li class="nav-item  md:w-fit w-full">
-          <a href="" class="nav-link  flex md:h-fit h-[55px] items-center">Quizzes</a>
-        </li>
       </ul>
 
     </div>
