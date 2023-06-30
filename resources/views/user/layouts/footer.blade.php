@@ -18,9 +18,9 @@
 <!-- Subscribe section -->
 <section>
 
-<div class=" bg-cyan-400 h-[11vh] flex items-center gap-5 rounded-t-[15px]">
+<div class=" bg-cyan-400 h-[11vh] flex items-center overflow-hidden justify-center gap-5 rounded-t-[15px]">
 
-  <div class=" border-r-[1px] p-2">
+  <div class=" border-r-[1px] p-2 sm:w-1/2">
     <h4 class=" text-[9px] leading-3"
       style="text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25); color: rgba(30, 30, 30, 0.41);">Sign with your email
       Account</h4>
@@ -36,7 +36,7 @@
 
   </div>
 
-  <div class=" flex gap-7">
+  <div class=" flex gap-7 sm:w-1/2">
     <a href="#"> <img src=" {{ asset('user/assets/img/Car 9.jpg') }}" class="h-[33px] w-[33px] object-cover rounded-full bg-primary border-2 border-spacing-1 border-red-800 p-0.5" alt=""></a>
    <a href="#"> <img src=" {{ asset('user/assets/img/Car 9.jpg') }}" class="h-[33px] w-[33px] object-cover rounded-full bg-secondary border-2 border-spacing-1 border-red-800 p-0.5" alt=""></a> 
     <a href=""><img src=" {{ asset('user/assets/img/Car 9.jpg') }}" class="h-[33px] w-[33px] object-cover rounded-full bg-dark border-2 border-spacing-1 border-red-800 p-0.5"
