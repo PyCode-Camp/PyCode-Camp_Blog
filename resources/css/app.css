@@ -37,3 +37,7 @@ body {
   .activ {
     background-color: #524c4cb2 !important;
   }
+
+  .shade {
+    box-shadow: 2px 1px 4px 1px black;
+  }

@@ -29,7 +29,7 @@
     </div>
     <!--  -->
     <div
-      class="navbar-nav z-50 shadow-lg md:shadow-none transition-all md:transition-none ease-in duration-700 bg-[#015E7D] text-[#FFFFFF] md:bg-transparent 
+      class="navbar-nav z-50 shadow-2xl shade md:shadow-none transition-all md:transition-none ease-in duration-700 bg-[#015E7D] text-[#FFFFFF] md:bg-transparent 
               md:static absolute md:z-auto  opacity-0 md:opacity-100 md:min-h-fit min-h-[290px] max-h-[290px] md:max-h-fit left-0  md:w-fit w-[267px] top-[-400px] px-5 "
       id="navBar">
 
