@@ -2,16 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
     font-family: "Urbanist";
-  }
-  
-  .indicator{
-    transition: left .4s;
-  }
-  
-  #subscription-form {
+}
+
+.indicator {
+    transition: left 0.4s;
+}
+
+#subscription-form {
     display: none;
     position: fixed;
     top: 50%;
@@ -22,22 +21,22 @@ body {
     padding: 20px;
     background-color: #fff;
     border: 2px solid #333;
-  }
-  
-  #subscription-form.show {
+}
+
+#subscription-form.show {
     display: block;
-  }
-  
-  .heading {
+}
+
+.heading {
     /* background-image: url(assets/images/Car\ 9.jpg); */
     background-color: #040814ea;
     min-width: 100vw;
-  }
-  
-  .activ {
-    background-color: #524c4cb2 !important;
-  }
+}
 
-  .shade {
+.activ {
+    background-color: #524c4cb2 !important;
+}
+
+.shade {
     box-shadow: 2px 1px 4px 1px black;
-  }
+}

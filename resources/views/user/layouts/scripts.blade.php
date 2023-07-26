@@ -13,15 +13,11 @@
       e.name = e.name === "menu" ? "close-outline" : "menu";
 
       if (e.name === "close-outline") {
-        navbar_nav.classList.remove("top-[-400px]");
-        navbar_nav.classList.add("top-[0%]");
+        navbar_nav.classList.add("scale-100");
         navbar_nav.classList.add("opacity-100");
-
-
       }
       else {
-        navbar_nav.classList.add("top-[-400px]");
-        navbar_nav.classList.remove("top-[0%]");
+        navbar_nav.classList.remove("scale-100")
         navbar_nav.classList.remove("opacity-100");
       }
       //navbar_nav.classList.toggle("top-[13%]");
@@ -44,11 +40,8 @@
       if (icon.name == "close-outline" && e.target.id !== 'navBar' && e.target.id !== 'ico') {
 
         icon.name = 'menu';
-        navbar_nav.classList.add("top-[-400px]");
-        navbar_nav.classList.remove("top-[0%]");
+        navbar_nav.classList.remove("scale-100")
         navbar_nav.classList.remove("opacity-100");
-
-
 
       }
     })
