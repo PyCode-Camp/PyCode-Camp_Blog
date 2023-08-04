@@ -44,7 +44,7 @@
               <a href="{{ route('post', $featuredPost->slug)}}">
               <h3
                 class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
-                  {{ $featuredPost->title }}</h3>
+                  {{ Str::limit($featuredPost->title, 50 )}}</h3>
               </a>
               <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
                 style="color: rgba(15, 15, 15, 0.74);">{{$featuredPost->created_at->format('j M Y')}} 8 min read</p>
@@ -154,7 +154,7 @@
               <a href="{{ route('post', $post->slug)}}">
               <h3
                 class=" text-[15px]  leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
-                {{ $post->title }} </h3>
+                {{ Str::limit($post->title, 50) }} </h3>
               </a>
               <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
                 style="color: rgba(15, 15, 15, 0.74);">{{ $post->created_at->format('j M Y') }} 8 min read</p>
@@ -180,7 +180,7 @@
               <a href="{{ route('post', $trendPost->slug)}}">
               <h3
                 class=" text-[15px] leading-[18.9px] md:leading-[25.9px] lg:leading-[35px] md:text-[19px] lg:text-[32px] font-bold">
-                {{ $trendPost->title }} </h3>
+                {{ Str::limit($trendPost->title, 50)  }} </h3>
               </a>
               <p class="text-[12px] absolute top-[76px] md:top-[100px] lg:top-[180px]"
                 style="color: rgba(15, 15, 15, 0.74);">{{ $trendPost->created_at->format('j M Y') }} 8 min read</p>
